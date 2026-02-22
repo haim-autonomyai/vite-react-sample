@@ -11,7 +11,7 @@ function FeedCard(props: FeedProps) {
       h-96
       ">
 
-      <div className="p-4">
+      <div className="p-4 m-0">
         <h2 className="text-lg font-medium text-gray-900">{props.title}</h2>
         <p className="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
