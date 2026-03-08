@@ -8,12 +8,12 @@ function Avatar(props: AvatarProps) {
     <div className='
       avatar__container 
       flex 
-      flex-row
+      flex-col
       items-center
       w-full
       '>
 
-      <div className='avatar__photo mr-20'>
+      <div className='avatar__photo'>
         <img
           className='
           rounded-full
