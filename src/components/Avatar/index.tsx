@@ -10,6 +10,7 @@ function Avatar(props: AvatarProps) {
       flex 
       flex-col
       items-center
+      justify-center
       w-full
       '>
 
