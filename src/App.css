@@ -40,3 +40,38 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Avatar Component Styles */
+.avatar__container {
+  /* Flex layout is applied via Tailwind classes */
+}
+
+.avatar__photo {
+  /* Margin is applied via Tailwind mr-20 class */
+  flex-shrink: 0;
+}
+
+.avatar__photo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.avatar__texts {
+  /* Flex alignment is applied via Tailwind classes */
+  flex: 1;
+}
+
+.text__title h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.text__name h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
