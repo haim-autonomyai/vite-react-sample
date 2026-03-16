@@ -12,7 +12,7 @@ function LoginPage(props: LoginPageProps) {
   };
 
   return (
-    <div className="login__container min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">
+    <div className="login__container min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="login__card bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
         
         <div className="login__header mb-8">
