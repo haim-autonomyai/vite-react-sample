@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Input from '../../components/Input';
+import SSOProviders from '../../components/SSOProviders';
+import ssoService from '../../services/ssoService';
 
 interface LoginPageProps {}
 
@@ -9,6 +11,17 @@ function LoginPage(props: LoginPageProps) {
 
   const handleSignIn = () => {
     console.log('Sign in attempt:', { email, password });
+  };
+
+  const handleSSOSignIn = (provider: 'google' | 'github' | 'microsoft') => {
+    console.log(`SSO sign in with ${provider}`);
+    // In a real app, you would handle the successful authentication here
+    ssoService.signIn(provider).then((response) => {
+      if (response.success) {
+        console.log('SSO login successful:', response.user);
+        // Handle successful login (e.g., redirect, set auth token)
+      }
+    });
   };
 
   return (
@@ -24,7 +37,9 @@ function LoginPage(props: LoginPageProps) {
           </p>
         </div>
 
-        <div className="login__form space-y-4">
+        <div className="login__form space-y-6">
+          <SSOProviders onSignIn={handleSSOSignIn} />
+
           <Input
             label="Email"
             type="email"
