@@ -38,7 +38,6 @@ export function AuthProvider(props: AuthProviderProps) {
     setUserEmail(null);
     localStorage.removeItem('authToken');
     localStorage.removeItem('userEmail');
-    localStorage.removeItem('rememberMe');
   };
 
   return (

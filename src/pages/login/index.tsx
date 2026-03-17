@@ -11,8 +11,7 @@ function LoginPage(props: LoginPageProps) {
 
   const handleLogin = async (
     email: string,
-    password: string,
-    rememberMe: boolean
+    password: string
   ) => {
     setIsLoading(true);
     setErrorMessage('');
@@ -27,10 +26,6 @@ function LoginPage(props: LoginPageProps) {
       // Store token and email in localStorage
       localStorage.setItem('authToken', token);
       localStorage.setItem('userEmail', email);
-      
-      if (rememberMe) {
-        localStorage.setItem('rememberMe', 'true');
-      }
 
       // Call success callback
       if (props.onLoginSuccess) {

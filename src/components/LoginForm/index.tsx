@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Input from '../Input';
 
 interface LoginFormProps {
-  onSubmit: (email: string, password: string, rememberMe: boolean) => Promise<void>;
+  onSubmit: (email: string, password: string) => Promise<void>;
   isLoading?: boolean;
   errorMessage?: string;
 }
@@ -10,7 +10,6 @@ interface LoginFormProps {
 function LoginForm(props: LoginFormProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
@@ -41,7 +40,7 @@ function LoginForm(props: LoginFormProps) {
     // Only proceed if validation passes
     if (email && validateEmail(email) && password) {
       try {
-        await props.onSubmit(email, password, rememberMe);
+        await props.onSubmit(email, password);
       } catch (error) {
         console.error('Login failed:', error);
       }
@@ -74,17 +73,6 @@ function LoginForm(props: LoginFormProps) {
           error={passwordError}
           disabled={props.isLoading}
         />
-      </div>
-
-      <div className="login-form__remember-me">
-        <input
-          type="checkbox"
-          id="remember-me"
-          checked={rememberMe}
-          onChange={(e) => setRememberMe(e.target.checked)}
-          disabled={props.isLoading}
-        />
-        <label htmlFor="remember-me">Remember me</label>
       </div>
 
       <button
