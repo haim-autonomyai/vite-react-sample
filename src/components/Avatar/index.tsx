@@ -17,13 +17,15 @@ function Avatar(props: AvatarProps) {
         <img
           className='
           rounded-full
-          hover:scale-x-110
-          hover:scale-y-110
-          animation-delay: 999s;
-          hover:animate-
+          hover:scale-110
+          transition-transform
+          duration-300
+          hover:shadow-2xl
+          hover:drop-shadow-[0_0_16px_rgba(110,231,183,0.6)]
           bg-gradient-to-r 
           p-[6px] 
-          from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
+          from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]
+          animate-fade-in
           '
           src="./src/assets/photo.png"
         />
