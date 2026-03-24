@@ -37,10 +37,6 @@ function LoginPage(props: LoginPageProps) {
       items-center
       justify-center
       min-h-screen
-      bg-gradient-to-r
-      from-[#6EE7B7]
-      via-[#3B82F6]
-      to-[#9333EA]
     '>
       <div className='
         login__card
