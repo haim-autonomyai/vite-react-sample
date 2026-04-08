@@ -39,12 +39,6 @@ function Avatar(props: AvatarProps) {
           <h2>{props.realname}</h2>
         </div>
 
-        <div className='text__follow'>
-          <button className='w-80 mt-5'>
-            Follow
-          </button>
-        </div>
-
       </div>
 
     </div>
